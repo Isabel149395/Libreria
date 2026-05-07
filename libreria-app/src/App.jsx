@@ -34,7 +34,7 @@ function App() {
       <header className="app-header">
         <h1 className="app-titulo">La Serpiente de Papel</h1>
         <p className="app-subtitulo">
-          Haz clic en el lomo de un libro para ver su ficha
+          Cada lomo guarda un mundo — haz clic para descubrirlo
         </p>
       </header>
 
