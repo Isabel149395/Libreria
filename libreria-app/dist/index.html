@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <!--
+      El meta viewport y las etiquetas SEO van aquí en index.html, NO en JSX.
+      Razón: el HTML inicial de CSR está vacío. Los crawlers y dispositivos
+      leen este archivo antes de que React hidrate el DOM.
+      (Concepto CSR — Paso 5 de la guía práctica)
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="La Serpiente de Papel  — Explora libros por género con fichas interactivas"
+    />
+    <title>La Serpiente de Papel</title>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <script type="module" crossorigin src="/assets/index-CqP9EJIy.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CrM1Vo-I.css">
+  </head>
+  <body>
+    <!--
+      Este div está vacío antes de que React cargue.
+      Si inspeccionas "Ver código fuente" (Ctrl+U) verás solo este div vacío.
+      Eso es CSR: el contenido lo inyecta JavaScript en el cliente.
+    -->
+    <div id="root"></div>
+  </body>
+</html>
