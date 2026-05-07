@@ -603,8 +603,8 @@ export const generos = [
     ],
   },   
   {
-    id: "Romance",
-    nombre: "Romance",
+    id: "desarrolloPersonal",
+    nombre: "Desarrollo Personal",
     libros: [
       {
         id: 57,
