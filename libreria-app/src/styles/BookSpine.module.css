@@ -1,0 +1,61 @@
+/* BookSpine.module.css */
+/* Estilo del lomo de cada libro en el estante */
+
+.lomo {
+  width: 42px;
+  height: 180px;
+  border-radius: 3px 0 0 3px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    inset -3px 0 6px rgba(0, 0, 0, 0.3),
+    2px 0 4px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  flex-shrink: 0;
+  border-left: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Efecto al pasar el cursor: el libro se eleva ligeramente */
+.lomo:hover {
+  transform: translateY(-8px) scaleY(1.02);
+  box-shadow:
+    inset -3px 0 8px rgba(0, 0, 0, 0.35),
+    3px 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.lomo:active {
+  transform: translateY(-5px) scaleY(1.01);
+}
+
+/* Título rotado verticalmente en el lomo */
+.titulo {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  font-size: 11px;
+  font-family: "Georgia", serif;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-height: 160px;
+  padding: 6px 0;
+  line-height: 1.2;
+  user-select: none;
+}
+
+/* Decoración sutil en la parte inferior del lomo */
+.lomo::after {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.25);
+}

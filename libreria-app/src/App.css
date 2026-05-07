@@ -1,0 +1,81 @@
+/* App.css — Estilos globales de la aplicación
+   Nota: los estilos de componentes individuales están en sus
+   respectivos archivos *.module.css (CSS Modules con scope) */
+
+/* Importar fuentes desde Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap");
+
+/* Reset básico */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fondo general: madera oscura de la habitación de la librería */
+body {
+  background-color: #1a0f08;
+  background-image:
+    radial-gradient(ellipse at top, #2d1a0e 0%, #0d0603 100%),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 60px,
+      rgba(0, 0, 0, 0.07) 60px,
+      rgba(0, 0, 0, 0.07) 61px
+    );
+  min-height: 100vh;
+  color: #f5e6cc;
+}
+
+/* Contenedor principal */
+.app-contenedor {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 24px 60px;
+}
+
+/* Header */
+.app-header {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.app-titulo {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(36px, 6vw, 56px);
+  font-weight: 700;
+  color: #d4a84b;
+  letter-spacing: 0.04em;
+  text-shadow: 0 2px 20px rgba(212, 168, 75, 0.3);
+  /* Separador decorativo entre el título y subtítulo */
+  position: relative;
+  padding-bottom: 16px;
+}
+
+.app-titulo::after {
+  content: "—✦—";
+  display: block;
+  font-size: 18px;
+  color: #8b6914;
+  margin-top: 10px;
+  letter-spacing: 0.3em;
+}
+
+.app-subtitulo {
+  font-family: "Lora", serif;
+  font-size: 14px;
+  color: #9a7a55;
+  font-style: italic;
+  margin-top: 6px;
+  letter-spacing: 0.05em;
+}
+
+/* Área de los estantes */
+.app-estantes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
